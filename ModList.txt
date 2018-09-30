@@ -1,0 +1,1 @@
+Test Mod|Kriogenic|Doesn't do anything|https://github.com/TesseractCat/clustertruck-mods/blob/master/DiscoTruck.dll?raw=true
