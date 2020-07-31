@@ -1,8 +1,4 @@
-﻿using System;
-using UnityEngine;
-using System.IO;
-using System.Reflection;
-using System.Collections;
+﻿using UnityEngine;
 using System.Collections.Generic;
 
 namespace UnityModLoader.Window

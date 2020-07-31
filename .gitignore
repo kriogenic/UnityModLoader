@@ -11,6 +11,7 @@
 *.userprefs
 
 # Build results
+[Bb]uild/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -44,6 +45,7 @@ dlldata.c
 project.lock.json
 artifacts/
 
+*.bat
 *_i.c
 *_p.c
 *_i.h

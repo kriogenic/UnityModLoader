@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using System.IO;
 using System.Collections.Generic;
 
 namespace UnityModLoader.Window
@@ -11,7 +10,6 @@ namespace UnityModLoader.Window
 		public bool debugWindow = false;
 		public Vector2 debugScrollBar = new Vector2 ();
 		List<String> Logs = new List<String>();
-		String currentLog = "";
 
         void Start() {
 			Application.logMessageReceived += HandleLog;
@@ -45,7 +43,7 @@ namespace UnityModLoader.Window
 
 		public void HandleLog (String logString, String stackTrace, LogType logType) {
 			Logs.Add (logString);
-			debugScrollBar.y = Mathf.Infinity;
+			debugScrollBar.y = float.MaxValue;
 		}
 	}
 }

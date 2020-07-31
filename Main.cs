@@ -1,13 +1,21 @@
-﻿using System;
+﻿/*
+ * To use this mod loader it is required that you find a suitable place to inject the following code using dnSpy
+ *     Assembly dll = Assembly.LoadFile(Directory.GetCurrentDirectory() + "\\UnityModLoader.dll");
+ *     Type t = dll.GetType("UnityModLoader.Main");
+ *     object obj = dll.CreateInstance(t.Name);
+ *     MethodInfo m = t.GetMethod("Start");
+ *     m.Invoke(null, null); 
+ */
+using System;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using UnityEngine;
-
 namespace UnityModLoader
 {
-	public class Main : MonoBehaviour
+	public static class Main
 	{
-		GameObject modObject;
-
-		public void Start()
+		static GameObject modObject;
+		public static void Start()
 		{
 
 			if (!GameObject.Find ("Kriogenic Unity Mod Loader")) {
@@ -22,7 +30,15 @@ namespace UnityModLoader
 				modObject.AddComponent<UnityModLoader.Window.UI> ();
 				GameObject.DontDestroyOnLoad (modObject);
                 modObject.name = "Kriogenic Unity Mod Loader";
-            }
+
+
+
+			}
+        }
+
+		public static void Starts()
+        {
+			Console.WriteLine("HERE WE ARE");
         }
 	}
 }
