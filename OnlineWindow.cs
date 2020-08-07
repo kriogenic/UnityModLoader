@@ -107,6 +107,9 @@ namespace UnityModLoader.Window
             if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.U) || Input.GetKey(KeyCode.RightControl) && Input.GetKeyDown(KeyCode.U))
             {
                 onlineWindow = !onlineWindow;
+                GetComponent<Debug>().debugWindow = false;
+                GetComponent<Explorer>().explorerWindow = false;
+                GetComponent<MainWindow>().consoleWindow = false;
             }
         }
     }

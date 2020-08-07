@@ -10,11 +10,24 @@ namespace UnityModLoader
 
         public void Start()
         {
-            Directory.CreateDirectory(Application.dataPath + "/Managed/Mods/");
-            foreach (String path in Directory.GetFiles(Application.dataPath + "/Managed/Mods/", "*.dll"))
+
+            string path = Application.dataPath + "/Managed/Mods/";
+            Directory.CreateDirectory(path);
+
+            foreach (string d in Directory.GetDirectories(path))
             {
-                LoadMod(path);
+                Debug.Log("WE LOOKIN FOR IT");
+                if (File.Exists(d + "/mod.dll"))
+                {
+                    Debug.Log("WE FOUND IT");
+                    LoadMod(d + "/mod.dll");
+                }
             }
+
+            //foreach (String file in Directory.GetFiles(Application.dataPath + "/Managed/Mods/", "*.dll"))
+           // {
+           //     LoadMod(file);
+           // }
         }
 
         public static void LoadMod(string path)

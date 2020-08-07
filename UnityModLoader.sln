@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityModLoader", "UnityModLoader.csproj", "{00910365-1BAD-4C2C-A55D-03D788A36342}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExampleMods", "ExampleMods", "{D482AA8C-9422-437A-AA09-23B4AAA385DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelEditor", "ExampleMods\LevelEditor\LevelEditor.csproj", "{9E733E29-7C3C-4D75-BA3E-70D75243D393}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +31,24 @@ Global
 		{00910365-1BAD-4C2C-A55D-03D788A36342}.Release|x64.Build.0 = Release|x64
 		{00910365-1BAD-4C2C-A55D-03D788A36342}.Release|x86.ActiveCfg = Release|Any CPU
 		{00910365-1BAD-4C2C-A55D-03D788A36342}.Release|x86.Build.0 = Release|Any CPU
+		{9E733E29-7C3C-4D75-BA3E-70D75243D393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E733E29-7C3C-4D75-BA3E-70D75243D393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E733E29-7C3C-4D75-BA3E-70D75243D393}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9E733E29-7C3C-4D75-BA3E-70D75243D393}.Debug|x64.Build.0 = Debug|Any CPU
+		{9E733E29-7C3C-4D75-BA3E-70D75243D393}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9E733E29-7C3C-4D75-BA3E-70D75243D393}.Debug|x86.Build.0 = Debug|Any CPU
+		{9E733E29-7C3C-4D75-BA3E-70D75243D393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E733E29-7C3C-4D75-BA3E-70D75243D393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E733E29-7C3C-4D75-BA3E-70D75243D393}.Release|x64.ActiveCfg = Release|Any CPU
+		{9E733E29-7C3C-4D75-BA3E-70D75243D393}.Release|x64.Build.0 = Release|Any CPU
+		{9E733E29-7C3C-4D75-BA3E-70D75243D393}.Release|x86.ActiveCfg = Release|Any CPU
+		{9E733E29-7C3C-4D75-BA3E-70D75243D393}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9E733E29-7C3C-4D75-BA3E-70D75243D393} = {D482AA8C-9422-437A-AA09-23B4AAA385DF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CB981F08-C40F-47B3-A5F3-020907B7BE92}

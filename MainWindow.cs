@@ -8,7 +8,7 @@ using System.Security.Cryptography;
 
 namespace UnityModLoader.Window
 {
-	public class Console : MonoBehaviour
+	public class MainWindow : MonoBehaviour
 	{
 		public Rect consoleWindowRect = new Rect(20,20,375,600);
 		public bool consoleWindow = true;
@@ -42,7 +42,7 @@ namespace UnityModLoader.Window
 		}
 
 		public void ConsoleWindow(int windowID) {
-			GUILayout.Label ("Kriogenic Mod Loader v0.8 Enabled");
+			GUILayout.Label ("Kriogenic Mod Loader v0.8.1 Enabled");
 			GUILayout.Label ("Press Ctrl + I to toggle this menu");
 			GUILayout.Label ("Press Ctrl + O to toggle object explorer menu (dev)");
 			GUILayout.Label ("Press Ctrl + P to toggle debug viewer (dev)");

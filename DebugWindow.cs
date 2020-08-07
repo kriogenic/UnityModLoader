@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Experimental.UIElements;
 
 namespace UnityModLoader.Window
 {
@@ -18,7 +19,14 @@ namespace UnityModLoader.Window
 		void OnGUI() {
 			GUI.skin = UnityModLoader.Window.UI.UISkin;
 			if (debugWindow) {
+				Cursor.visible = true;
+				//Time.timeScale = 0.2f;
 				debugWindowRect = GUI.Window (2, debugWindowRect, DebugWindow, "Debug");
+            }
+            else
+            {
+				Cursor.visible = false;
+				Time.timeScale = 1f;
 			}
 		}
 
@@ -37,6 +45,9 @@ namespace UnityModLoader.Window
 		public void Update() {
 			if (Input.GetKey (KeyCode.LeftControl) && Input.GetKeyDown (KeyCode.P) || Input.GetKey (KeyCode.RightControl) && Input.GetKeyDown (KeyCode.P)) {
 				debugWindow = !debugWindow;
+				GetComponent<MainWindow>().consoleWindow = false;
+				GetComponent<Explorer>().explorerWindow = false;
+				GetComponent<Online>().onlineWindow = false;
 			}
 
 		}

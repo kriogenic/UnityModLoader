@@ -20,25 +20,21 @@ namespace UnityModLoader
 
 			if (!GameObject.Find ("Kriogenic Unity Mod Loader")) {
 				modObject = new GameObject ();
+				modObject.AddComponent<Window.Debug>();
 				if (PlayerPrefs.GetInt ("Disabled") == 0) {
 					modObject.AddComponent<ModLoader> ();
 				}
-				modObject.AddComponent<UnityModLoader.Window.Debug> ();
-				modObject.AddComponent<UnityModLoader.Window.Explorer> ();
-				modObject.AddComponent<UnityModLoader.Window.Console> ();
-				modObject.AddComponent<UnityModLoader.Window.Online> ();
-				modObject.AddComponent<UnityModLoader.Window.UI> ();
+				
+				modObject.AddComponent<Window.Explorer> ();
+				modObject.AddComponent<Window.MainWindow> ();
+				modObject.AddComponent<Window.Online> ();
+				modObject.AddComponent<Window.UI> ();
 				GameObject.DontDestroyOnLoad (modObject);
                 modObject.name = "Kriogenic Unity Mod Loader";
 
 
 
 			}
-        }
-
-		public static void Starts()
-        {
-			Console.WriteLine("HERE WE ARE");
         }
 	}
 }
