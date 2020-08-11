@@ -260,6 +260,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUIHelper.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

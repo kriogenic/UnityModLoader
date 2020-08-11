@@ -48,12 +48,6 @@ namespace LevelEditor
 
         }
 
-        public void OnGUI()
-        {
-            GUI.Label(new Rect(10, 10, 200, 20), "I'm a little teapot");
-        }
-
-
         private void copyToClipboard()
         {
 
@@ -95,7 +89,10 @@ namespace LevelEditor
             }
             return null;
         }
-
+        public void test()
+        {
+            Debug.Log("BUTOTN CLICE");
+        }
         public void Update()
         {
 
@@ -136,6 +133,14 @@ namespace LevelEditor
                 PauseScreen PS = GameObject.FindObjectOfType<PauseScreen>();
                 if (PS != null)
                     PS.cheatButton.SetActive(true);
+
+                ModGUI levelGUI = new ModGUI("LevelEditorCanvas");
+                GameObject levelPanel = levelGUI.createPanel("NewPanel", null, Color.grey);
+                Text testText = levelGUI.createLabel(levelPanel, "TestText", "We are some test", 24, new Vector2(0, -100));
+
+                Dropdown a = levelGUI.createDropdown(levelPanel, "My Dropdown", new Vector2(30f, -150f));
+                Button b = levelGUI.createButton(levelPanel, "TestButton", "My Button", new Vector2(50f, -300f), new Vector2(100, 50));
+                b.onClick.AddListener(test);
             }
 
 
